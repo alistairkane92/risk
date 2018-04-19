@@ -1,10 +1,12 @@
+package models;
+
 import java.util.Map;
 
-public class Country {
+public class Territory {
     private String name;
     private Map<Piece, Integer> army;
 
-    public Country(String name, Map<Piece, Integer> army) {
+    public Territory(String name, Map<Piece, Integer> army) {
         this.name = name;
         this.army = army;
     }

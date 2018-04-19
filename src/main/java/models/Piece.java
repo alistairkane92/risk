@@ -1,3 +1,5 @@
+package models;
+
 public enum Piece {
     INFANTRY(1),
     CAVALRY(5),

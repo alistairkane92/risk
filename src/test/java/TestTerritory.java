@@ -1,3 +1,5 @@
+import models.Territory;
+import models.Piece;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -6,8 +8,8 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestCountry {
-    Country country;
+public class TestTerritory {
+    Territory territory;
 
     @Before
     public void setUp() throws Exception {
@@ -15,37 +17,37 @@ public class TestCountry {
         army.put(Piece.INFANTRY, 1);
         army.put(Piece.CAVALRY, 2);
         army.put(Piece.ARTILLERY, 3);
-        country = new Country("Spain", army);
+        territory = new Territory("Spain", army);
     }
 
     @Test
     public void testCountryHasInfantry(){
-        assertEquals(1, country.getInfantry());
+        assertEquals(1, territory.getInfantry());
     }
 
     @Test
     public void testCountryHasCavalry(){
-        assertEquals(2, country.getCavalry());
+        assertEquals(2, territory.getCavalry());
     }
 
     @Test
     public void testCalculateInfantry(){
-        assertEquals(1, country.totalInfantry());
+        assertEquals(1, territory.totalInfantry());
     }
 
     @Test
     public void testCalculateCavalry(){
-        assertEquals(10, country.totalCavalry());
+        assertEquals(10, territory.totalCavalry());
     }
 
     @Test
     public void testCountryHasArtillery(){
-        assertEquals(30, country.totalArtillery());
+        assertEquals(30, territory.totalArtillery());
     }
 
     @Test
     public void testCountryTotalValue(){
-        assertEquals(41, country.total());
+        assertEquals(41, territory.total());
     }
 
 
