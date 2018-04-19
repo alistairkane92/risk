@@ -29,9 +29,30 @@ public class TestCountry {
     }
 
     @Test
-    public void testCountryHasArtillery(){
-        assertEquals(3, country.getArtillery());
+    public void testCalculateInfantry(){
+        assertEquals(1, country.totalInfantry());
     }
+
+    @Test
+    public void testCalculateCavalry(){
+        assertEquals(10, country.totalCavalry());
+    }
+
+    @Test
+    public void testCountryHasArtillery(){
+        assertEquals(30, country.totalArtillery());
+    }
+
+    @Test
+    public void testCountryTotalValue(){
+        assertEquals(41, country.total());
+    }
+
+
+
+
+
+
 
 
 

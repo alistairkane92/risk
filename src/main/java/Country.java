@@ -36,4 +36,20 @@ public class Country {
     public void setArmy(Map<Piece, Integer> army) {
         this.army = army;
     }
+
+    public int totalInfantry() {
+        return this.getInfantry() * Piece.INFANTRY.getValue();
+    }
+
+    public int totalCavalry() {
+        return this.getCavalry() * Piece.CAVALRY.getValue();
+    }
+
+    public int totalArtillery() {
+        return this.getArtillery() * Piece.ARTILLERY.getValue();
+    }
+
+    public int total() {
+        return totalInfantry() + totalCavalry() + totalArtillery();
+    }
 }
